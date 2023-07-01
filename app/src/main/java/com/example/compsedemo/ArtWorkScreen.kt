@@ -89,12 +89,12 @@ fun ArtWorkGallery(artWorkList: MutableList<ArtWorkData>) {
 fun ArtWorkController(modifier: Modifier, onNextCall: () -> Unit, onPreviousCall: () -> Unit) {
     Row(
         modifier = modifier.padding(10.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
+        horizontalArrangement = Arrangement.SpaceAround
     ) {
-        Button(onClick = onPreviousCall) {
+        Button(onClick = onPreviousCall , modifier.weight(0.5f)) {
             Text(text = "Previous" , fontSize = 20.sp)
         }
-        Button(onClick = onNextCall) {
+        Button(onClick = onNextCall , modifier.weight(0.5f)) {
             Text(text = "Next" ,fontSize = 20.sp)
         }
     }
